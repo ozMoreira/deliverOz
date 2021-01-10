@@ -16,9 +16,10 @@
   font-weight: bold;
   font-size: 55px;
   line-height: 58px;
-  letter-spacing: -0.015em;
+  letter-spacing: 0.150em;
   color: var(--dark-color);
   margin-bottom: 40px !important;
+  font-family: 'Lobster', cursive;
 }
 
 .home-subtitle {
@@ -28,7 +29,7 @@
   letter-spacing: -0.015em;
   color: var(--secondary-color);
   margin-bottom: 30px;
-  font-family: 'Open Sans', sans-serif;
+  
 }
 
 .home-btn-order {
