@@ -2,7 +2,7 @@ import './style.css';
 import { ReactComponent as YoutubeIcon } from './youtube.svg';
 import { ReactComponent as LinkedinIcon } from './linkedin.svg';
 import { ReactComponent as InstagramIcon } from './instagram.svg';
-function Footer() {
+function Footer(): JSX.Element {
     return (
         <footer className = "main-footer">
         AerOz Solutions - Voce decolando em tecnologia!
