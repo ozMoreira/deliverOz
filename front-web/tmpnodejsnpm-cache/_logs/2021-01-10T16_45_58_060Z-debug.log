@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'star'
+1 verbose cli ]
+2 info using npm@6.14.10
+3 info using node@v14.15.4
+4 verbose npm-session 61c2d525ac69b37a
+5 verbose stack Error: npm star [<pkg>...]
+5 verbose stack npm unstar [<pkg>...]
+5 verbose stack
+5 verbose stack alias: unstar
+5 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\star.js:35:29
+5 verbose stack     at tryCatcher (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\util.js:16:23)
+5 verbose stack     at Function.Promise.attempt.Promise.try (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\method.js:39:29)
+5 verbose stack     at EventEmitter.star (C:\Program Files\nodejs\node_modules\npm\lib\star.js:34:16)
+5 verbose stack     at Object.commandCache.<computed> (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:156:13)
+5 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js:133:30)
+5 verbose stack     at processTicksAndRejections (internal/process/task_queues.js:75:11)
+6 verbose cwd C:\Users\maria eugenia\Documents\workspace\deliverOz\front-web
+7 verbose Windows_NT 10.0.18363
+8 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "star"
+9 verbose node v14.15.4
+10 verbose npm  v6.14.10
+11 error npm star [<pkg>...]
+11 error npm unstar [<pkg>...]
+11 error
+11 error alias: unstar
+12 verbose exit [ 1, true ]
