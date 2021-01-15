@@ -1,3 +1,4 @@
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, Alert} from 'react-native';
 import { RectButton, ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';
@@ -9,16 +10,30 @@ import { Order } from '../types';
 function Orders() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [isLoading, setIsLoading]= useState(false);
+  const navigation = useNavigation();
+  const isFocused = useIsFocused(); //true //false
 
-  useEffect(() => {
+  const fetchData = () => {
     setIsLoading(true);
     fetchOrders()
       .then(response => setOrders(response.data))
       .catch(() => Alert.alert('Houve um erro ao buscar os pedidos'))
       .finally(() => setIsLoading(false));
-  }, []);
+  }
+
+  useEffect(() => {
+    if (isFocused) {
+      fetchData();
+    }
+   
+  }, [isFocused]);
   
-  
+  const handleOnPress = (order: Order) => {
+    navigation.navigate('OrderDetails', {
+      order
+    });
+  }
+
   return (
     <>
       <Header />
@@ -27,7 +42,10 @@ function Orders() {
           <Text>Aguarde enquanto buscamos os pedidos...</Text>
         ) : (
           orders.map(order => (
-          <TouchableWithoutFeedback key={order.id}>
+          <TouchableWithoutFeedback 
+            key={order.id} 
+            onPress ={() => handleOnPress(order)}
+          >
              <OrderCard order={order} />
           </TouchableWithoutFeedback>
           ))
