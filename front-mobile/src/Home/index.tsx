@@ -1,8 +1,8 @@
+import Header from '../Header';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-import Header from '../Header';
 
 function Home() {
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ function Home() {
     <Header />
     <View style={styles.container}>
       <Image source={require('../Assets/deliveryman.png')} /> 
-      <Text style={styles.title}>Acompanhe os pedidos e {''} entregue nos prazos</Text>
+      <Text style={styles.title}>Acompanhe os pedidos e{'\n'} entregue nos prazos</Text>
       <Text style={styles.subTitle}>Receba todos os pedidos do seu {'\n'} restaurante na palma da sua mão</Text>
     </View>
     <View style={styles.footer}>
@@ -41,11 +41,13 @@ const styles = StyleSheet.create(
         },
         title: {
           color: '#263238',
-          fontSize: 26,
+          fontSize: 30,
           lineHeight: 35,
           fontWeight: 'bold',
           marginTop: 31,
-          textAlign: 'center'
+          textAlign: 'center',
+          fontFamily: 'Lobster_400Regular'
+
         },
         subTitle: {
           color: '#9E9E9E',

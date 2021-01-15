@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
   },
   text: {
       fontWeight: 'bold',
-      fontSize: 18,
+      fontSize: 20,
       lineHeight: 25,
-      letterSpacing: -0.24,
+      letterSpacing: 2.00,
       color: '#FFF', 
       marginLeft: 15,
-      fontFamily: 'OpenSans_700Bold'
+      fontFamily: 'Lobster_400Regular'
   }
 });
 

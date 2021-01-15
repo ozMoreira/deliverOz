@@ -1,4 +1,4 @@
-package com.devsuperior.dsdeliver.entities;
+	package com.devsuperior.dsdeliver.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -101,7 +101,7 @@ public class Order implements Serializable {
 	public Double getTotal() {
 		double sum = 0.0;
 		for (Product p : products) {
-			sum =+ p.getPrice();
+			sum += p.getPrice();
 		}
 		return sum;	
 	}
